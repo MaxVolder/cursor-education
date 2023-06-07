@@ -19,6 +19,7 @@ const averagePrice = totalPrice/3
 console.log('rondedAveragePrice:', averagePrice.toFixed(2));
 const discount = Math.random();
 const discountedPrice = (totalPrice - totalPrice * discount).toFixed(2);
+console.log('discountedPrice:', discountedPrice);
 let profit = (totalPrice/2) - discountedPrice;
 console.log('profit:',profit);
 const output = `

@@ -17,8 +17,8 @@ let sum = 500 - totalPrice;
 console.log('Сума решти:', 500 - totalPrice);
 const averagePrice = totalPrice/3
 console.log('rondedAveragePrice:', averagePrice.toFixed(2));
-const discount = Math.random();
-const discountedPrice = (totalPrice - totalPrice * discount).toFixed(2);
+const discount = Math.round(Math.random() * 100);
+const discountedPrice = (totalPrice - (totalPrice * (discount/100))).toFixed(2);
 console.log('discountedPrice:', discountedPrice);
 let profit = (totalPrice/2) - discountedPrice;
 console.log('profit:',profit);
@@ -31,7 +31,7 @@ const output = `
 Сума всіх товарів (округлена) є парним числом: ${isEven}
 Сума решти при оплаті на 500 грн: ${sum}
 Середнє значення цін: ${averagePrice.toFixed(2)}
-Знижка: ${discount}
+Знижка: ${discount}%
 Сума до оплати зі знижкою: ${discountedPrice}
 Чистий прибуток: ${profit.toFixed(2)}
 `;

@@ -77,5 +77,19 @@ function convertCurrency(currencyString) {
     }
   }
   
+  // Задача 8
+  function getRandomPassword(length = 8) {
+    let password = "";
+    const characters = "0123456789";
+    const charactersLength = characters.length;
+  
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * charactersLength);
+      password += characters.charAt(randomIndex);
+    }
+  
+    return password;
+  }
+  
 
   

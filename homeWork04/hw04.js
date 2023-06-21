@@ -67,13 +67,13 @@ function assignRandomMarks(pairsWithThemes) {
 }
 
 const pairs = getGenderPairs(students);
-console.log("Pairs:", pairs);
+console.log("Пари:", pairs);
 
 const pairsWithThemes = assignThemes(pairs, themes);
-console.log("Pairs with Themes:", pairsWithThemes);
+console.log("Пари по темах:", pairsWithThemes);
 
 const markedStudents = assignMarks(students, marks);
-console.log("Marked Students:", markedStudents);
+console.log("Оцінки студентів:", markedStudents);
 
 const finalResult = assignRandomMarks(pairsWithThemes);
-console.log("Final Result:", finalResult);
+console.log("Фінальний результат:", finalResult);

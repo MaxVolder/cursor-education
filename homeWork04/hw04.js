@@ -58,8 +58,8 @@ function assignRandomMarks(pairsWithThemes) {
 
   for (let i = 0; i < pairsWithThemes.length; i++) {
     const pairWithTheme = pairsWithThemes[i];
-    const randomMark = Math.floor(Math.random() * 5) + 1;
-    const pairedThemeWithMark = pairWithTheme.concat(randomMark);
+    const randomMark = Math.floor(Math.random() * 5 + 1);
+    const pairedThemeWithMark = [pairWithTheme].concat(randomMark);
     pairedThemesWithMarks.push(pairedThemeWithMark);
   }
 

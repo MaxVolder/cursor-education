@@ -37,3 +37,25 @@ function getTotalTaxes() {
 console.log(`Загальний податок в Україні: ${getTotalTaxes.call(ukraine)}`);  
 console.log(`Загальний податок в Латвії: ${getTotalTaxes.call(latvia)}`);  
 console.log(`Загальний податок в Литві: ${getTotalTaxes.call(litva)}`); 
+
+function getMySalary() {
+    const minSalary = 1500;
+    const maxSalary = 2000;
+    const salary = Math.floor(Math.random() * (maxSalary - minSalary + 1) + minSalary);
+    const taxes = this.tax * salary;
+    const profit = salary - taxes;
+  
+    const result = {
+      salary: salary,
+      taxes: taxes,
+      profit: profit,
+    };
+  
+    console.log(result);
+  };
+
+console.log(`Ukraine ${setInterval(getMySalary.bind(ukraine), 10000)}`);
+console.log(`Latvia ${setInterval(getMySalary.bind(latvia), 10000)}`);
+console.log(`Litva ${setInterval(getMySalary.bind(litva), 10000)}`)
+
+  

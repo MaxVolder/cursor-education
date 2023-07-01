@@ -37,7 +37,3 @@ function getTotalTaxes() {
 console.log(`Загальний податок в Україні: ${getTotalTaxes.call(ukraine)}`);  
 console.log(`Загальний податок в Латвії: ${getTotalTaxes.call(latvia)}`);  
 console.log(`Загальний податок в Литві: ${getTotalTaxes.call(litva)}`); 
-
-пш
-
-  

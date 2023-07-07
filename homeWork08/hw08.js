@@ -16,7 +16,9 @@ class Student {
     };
   
     set marks(mark) {
-      this.marks === null ? null : this.marks.push(item)
+      if (!this.dismissed) {
+        this._marks.push(mark);
+      }
     };
 
     getAverageMark() {
@@ -52,15 +54,16 @@ console.log(student.getAverageMark());
   
 student.dismiss();
 student.marks = 5;
-console.log(student.marks); // Виведе null
+console.log(student.marks);
   
 student.recover();
 student.marks = 5;
-console.log(student.marks); // Виведе [5]
+console.log(student.marks); 
 // Advance
 class BudgetStudent extends Student {
   constructor(course, university, name, isBudget) {
     super(course, university, name, isBudget);
+    this.isBudget = isBudget;
     this.scholarshipTimer = setInterval(() => {
       if (this.isBudget && !this.dismissed) {
         this.getScholarship();
@@ -70,7 +73,16 @@ class BudgetStudent extends Student {
   
   getScholarship() {
     if (this.getAverageMark() >= 4.0) {
-      console.log("Ви отримали 1400 грн. стипендії.");
+      console.log(`студент ${this.name} отримав степендію в розмірі 1400 грн`);
+    }
+    else {
+      console.log(`студент ${this.name} не отримав степендії`);
     }
   }
 };
+const student2 = new BudgetStudent(3, "Hogwards", "Volandemort", true);
+student2.marks = 2;
+student2.marks = 2;
+student2.marks = 1;
+student2.marks = 4;
+console.log(student2.getScholarship());

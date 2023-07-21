@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Star Wars API</title>
   <script src="hw12-1.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Monoton=swap" rel="stylesheet">
 </head>
 <body>
   <h1>Star Wars API</h1>
-  <input type="number" id="input" placeholder="Enter episode ID" />
+  <input type="number" id="input" min="1" max="6" placeholder="Enter episode number" style="width: 160px;"/>
   <button id="getInfo">Get Info</button>
   <button id="next">Show Planets</button>
   <button id="translate">Translate to Wookiee</button>
   <div id="getInfoOutput"></div>
   <div id="getPlanetsOutput"></div>
+  
 </body>
 </html>

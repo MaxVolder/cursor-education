@@ -1,0 +1,40 @@
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover; /* розтягувати зображення на весь фон */
+    background-repeat: no-repeat; /* не повторювати зображення */
+  }
+  body {
+    font-family: 'Monoton', cursive;;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #dde5e3; /* Колір тексту */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Тінь тексту */
+  }
+  
+  p {
+    font-size: 18px;
+    color: #ffffff; /* Колір тексту */
+  }
+  body.episode1 {
+    background-image: url(images/e1.jpg);
+  }
+  
+  body.episode2 {
+    background-image: url('images/e2.jpg');
+  }
+  body.episode3 {
+    background-image: url('images/e3.jpg');
+  }
+  body.episode4 {
+    background-image: url('images/e4.webp');
+  }
+  body.episode5 {
+    background-image: url('images/e5.jpg');
+  }
+  body.episode6 {
+    background-image: url('images/e6.webp');
+  }
+  

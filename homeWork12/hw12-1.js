@@ -6,16 +6,17 @@ let showingCharacters;
 
 getInfoButton.addEventListener("click", getInfo);
 nextButton.addEventListener("click", showAllPlanets);
-translateButton.addEventListener("click", translateButton);
+translateButton.addEventListener("click", translateToWookiee);
 
 async function getInfo() {
   try {
     document.getElementById("getInfoOutput").innerHTML = "Loading...";
-    showingCharacters = true;
-    document.getElementById("getPlanetsOutput").innerHTML = "";
     const episodeId = parseInt(document.getElementById("input").value);
 
     if (episodeId >= 1 && episodeId <= 6) {
+      document.body.className = `episode${episodeId}`;
+      showingCharacters = true;
+      document.getElementById("getPlanetsOutput").innerHTML = "";
       const resp = await fetch("https://swapi.dev/api/films/");
       const data = await resp.json();
       const episodeArr = data.results.filter(
@@ -28,7 +29,7 @@ async function getInfo() {
       for (const element of dataArr) {
         const tempResp = await fetch(element);
         const tempData = await tempResp.json();
-        result += `Ім'я персонажа: ${tempData.name}, рік народження: ${tempData.birth_year}, стать: ${tempData.gender} <br>`;
+        result += `<span style="color: white;">Ім'я персонажа: ${tempData.name}, рік народження: ${tempData.birth_year}, стать: ${tempData.gender}</span><br>`;
       }
 
       document.getElementById("getInfoOutput").innerHTML = result;
@@ -45,6 +46,7 @@ async function showAllPlanets() {
   try {
     document.getElementById("getPlanetsOutput").innerHTML =
       "Loading planets...";
+    document.body.className = "planets";
     showingCharacters = false;
     document.getElementById("getInfoOutput").innerHTML = "";
     showResults(1);
@@ -60,7 +62,7 @@ async function showResults(page) {
   const dataArr = data.results;
 
   for (const element of dataArr) {
-    result += `${element.name} <br>`;
+    result += `<span style="color: white;">${element.name}</span><br>`;
   }
 
   document.getElementById("getPlanetsOutput").innerHTML = result;
@@ -75,7 +77,7 @@ async function showResults(page) {
       showResults(page - 1);
     });
   }
-  
+
   if (page < 6) {
     const nextButton = document.createElement("button");
     nextButton.id = "next";

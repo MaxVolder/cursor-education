@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MaxVolder/cursor-education/static/css/main.d5a4eb02.css",
+    "main.js": "/MaxVolder/cursor-education/static/js/main.5a79b2fa.js",
+    "static/js/787.96ab09b3.chunk.js": "/MaxVolder/cursor-education/static/js/787.96ab09b3.chunk.js",
+    "index.html": "/MaxVolder/cursor-education/index.html",
+    "main.d5a4eb02.css.map": "/MaxVolder/cursor-education/static/css/main.d5a4eb02.css.map",
+    "main.5a79b2fa.js.map": "/MaxVolder/cursor-education/static/js/main.5a79b2fa.js.map",
+    "787.96ab09b3.chunk.js.map": "/MaxVolder/cursor-education/static/js/787.96ab09b3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5a4eb02.css",
+    "static/js/main.5a79b2fa.js"
+  ]
+}

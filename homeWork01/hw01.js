@@ -1,6 +1,6 @@
-const priceApple = 15.678;
-const priceBanana = 123.965;
-const priceOrange = 90.2345;
+export const priceApple = 15.678;
+export const priceBanana = 123.965;
+export const priceOrange = 90.2345;
 let maxPrice = Math.max(priceApple, priceBanana, priceOrange);
 console.log('maxPrice:', maxPrice)
 let minPrice = Math.min(priceApple, priceApple, priceOrange)

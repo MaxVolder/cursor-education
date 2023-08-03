@@ -41,7 +41,7 @@ document.getElementById("decrease").addEventListener("click", function () {
   const direction = fontGenerator.next("down").value;
   console.log(`Current font size: ${direction}px`);
 });
-fontGenerator.next("up").value;
+fontGenerator.next("up").value; 
 fontGenerator.next("up").value;
 fontGenerator.next().value;
 fontGenerator.next("down").value;
